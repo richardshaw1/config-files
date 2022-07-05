@@ -4,8 +4,9 @@
 
 #install LAMP Server
 yum update -y
-#install apache server
+#install apache server and start it for the health checks to work
 yum install -y httpd
+systemctl start httpd.service
 
 # enable php7.xx from  amazon-linux-extra and install it
 amazon-linux-extras enable php7.4
