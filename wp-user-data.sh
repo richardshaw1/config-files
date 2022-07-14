@@ -1,6 +1,9 @@
 #!/bin/bash
 # Configure an Amazon Linux 2 instance for Wordpress
 
+# PLEASE CHANGE THE FOLLOWING LINE TO MATCH YOUR INITIALS USED FOR ALL DEPLOYMENTS
+INITS=changeme
+
 # install all available updated
 yum update -y
 # install apache web server and start it for the health checks to work
@@ -34,6 +37,7 @@ wget https://github.com/mobilise-academy/wordpress/archive/refs/heads/main.zip -
 cd /tmp
 unzip /tmp/wordpress.zip
 mv wordpress-main/* /var/www/html
+sed -i "s/INITS/$INITS/" /var/www/html/wp-config.php
 cd /var/www/html
 
 # change permission of /var/www/html directory
