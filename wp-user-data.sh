@@ -2,7 +2,7 @@
 # Configure an Amazon Linux 2 instance for Wordpress
 
 # PLEASE CHANGE THE FOLLOWING LINE TO MATCH YOUR INITIALS USED FOR ALL DEPLOYMENTS
-INITS=changeme
+INITS=mobiliseacademyrs
 
 # install all available updated
 yum update -y
