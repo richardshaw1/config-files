@@ -33,7 +33,7 @@ find /var/www -type d -exec chmod 2775 {} \;
 find /var/www -type f -exec chmod 0664 {} \;
 
 # Download wordpress package from GitHub and extract 
-wget https://github.com/mobilise-academy/wordpress/archive/refs/heads/main.zip -O /tmp/wordpress.zip
+wget https://github.com/richardshaw1/wordpress/archive/refs/heads/main.zip -O /tmp/wordpress.zip
 cd /tmp
 unzip /tmp/wordpress.zip
 mv wordpress-main/* /var/www/html
